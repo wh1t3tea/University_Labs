@@ -58,3 +58,33 @@ from {
 transform: translateY(95%);
 }
 }
+.info .bio_info{
+font-size: 20px;
+font-weight: bold;
+}
+.info .skills_info{
+font-size: 20px;
+font-weight: bold;
+}
+.info .soft_skills_info {
+font-size: 20px;
+font-weight: bold;
+}
+.info .socials_info {
+margin-top: 15px;
+margin-bottom: 15px;
+}
+.info. .socials_info  a{
+padding: 15px;
+}
+.info .social_media {
+font-size: 20px;
+font-weight: bold;
+}
+.info {
+margin-top: 50px;
+padding: 10px;
+}
+.info p {
+padding: 0px;
+}
