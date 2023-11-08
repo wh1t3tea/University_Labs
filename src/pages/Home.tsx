@@ -15,7 +15,7 @@ export const TodoList = () => {
   const [sortOrder, setSortOrder] = useState<"name" | "state">("name");
 
   useEffect(() => {
-    const localStorageTodos = JSON.parse(localStorage.getItem("todos" || "[]"));
+    const localStorageTodos = JSON.parse(localStorage.getItem("todos") || "[]");
     setTodos(localStorageTodos);
   }, []);
 
