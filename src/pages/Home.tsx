@@ -49,6 +49,7 @@ export const TodoList = () => {
   const handleTaskCompletion = (id: string) => {
     const updatedTodos = todos.map((todo) => {
       if (todo.id === id) {
+        console.log(todo.completed)
         return { ...todo, completed: !todo.completed };
       }
       return todo;
@@ -92,6 +93,17 @@ export const TodoList = () => {
   const sortedTodos = [...filteredTodos];
   if (sortOrder === "name") {
     sortedTodos.sort((a, b) => a.text.localeCompare(b.text));
+  }
+  else {
+   sortedTodos.sort((a, b) => {
+    if (a.completed && !b.completed) {
+        return 1;
+      } else if (!a.completed && b.completed) {
+        return -1;
+      } else {
+        return 0;
+      }
+  });
   }
 
   return (
